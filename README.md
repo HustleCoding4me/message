@@ -83,9 +83,24 @@ public class MessageSourceT{
   
   @Test
   void messageTest(){
-    ms.getMessage("hello");
+     String message = ms.getMessage("hello.name", new Object[]{"Spring", 1}, Locale.KOREA);// messages_kr.properties
+     String message = ms.getMessage("hello.name", new Object[]{"Spring", 1}, Locale.getDefault()); //기본 Locale설정시 messages.properties
+     String message = ms.getMessage("no_code", null, "기본 메세지", null);//기본 메세지 설정하면 없어도 기본메세지를 출력, or Exception
   }
   
 }
 
 ```
+
+> 국제화에서 메세지 가져오는 순서
+
+* 보통 Locale의 이름을 기반으로 가져온다. 
+* ex) Locale이 en_US 인 경우, message_en_US -> message_en -> messages 순으로 찾는다.
+
+
+
+* key 값으로 hello를 가지고 있는 모습
+
+<img width="392" alt="Screen Shot 2022-05-19 at 3 30 55 PM" src="https://user-images.githubusercontent.com/37995817/169225446-9aa33575-938b-4fc0-87f1-4e2a8d3220a9.png">
+<img width="260" alt="Screen Shot 2022-05-19 at 3 31 07 PM" src="https://user-images.githubusercontent.com/37995817/169225481-91cfff0d-dec9-401e-969b-717f5e8624c0.png">
+
