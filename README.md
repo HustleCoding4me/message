@@ -83,7 +83,7 @@ public class MessageSourceT{
   
   @Test
   void messageTest(){
-    ms.getMessage("hello")
+    ms.getMessage("hello");
   }
   
 }
