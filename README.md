@@ -104,3 +104,19 @@ public class MessageSourceT{
 <img width="392" alt="Screen Shot 2022-05-19 at 3 30 55 PM" src="https://user-images.githubusercontent.com/37995817/169225446-9aa33575-938b-4fc0-87f1-4e2a8d3220a9.png">
 <img width="260" alt="Screen Shot 2022-05-19 at 3 31 07 PM" src="https://user-images.githubusercontent.com/37995817/169225481-91cfff0d-dec9-401e-969b-717f5e8624c0.png">
 
+
+
+> 현재 설정된 Locale 확인하는 방법 (크롬)
+
+* network Http 통신의 헤더에 Accept-Language를 확인하면 된다.
+* 언어가 나오는 순서는 우선순위 (ko -> en -> default 순으로 파일을 찾아 메세징 한다.)
+
+![Screen Shot 2022-05-20 at 4 21 38 PM](https://user-images.githubusercontent.com/37995817/169475046-25f2e978-99f9-4283-a204-171386885130.png)
+
+
+> 크롬에서 언어 설정 변경하여 인식되는지 파악하는 방법
+
+* setting에 Language로 가서, 언어에 우클릭하여 Top으로 보내면 된다.
+
+![Screen Shot 2022-05-20 at 4 27 17 PM](https://user-images.githubusercontent.com/37995817/169476119-ea62ae90-5235-4bff-835c-d2fcf778e93d.png)
+
