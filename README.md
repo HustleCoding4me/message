@@ -120,3 +120,19 @@ public class MessageSourceT{
 
 ![Screen Shot 2022-05-20 at 4 27 17 PM](https://user-images.githubusercontent.com/37995817/169476119-ea62ae90-5235-4bff-835c-d2fcf778e93d.png)
 
+---
+
+## LocaleResolver
+
+스프링은 기본적으로 Http의 AcceptHeader를 보고 언어를 판단하는데, 그 외에 강제적으로 언어를 변경하는 기능을 만든다거나 하는 방법을 사용하기 위해서는, 
+LocaleResolver인터페이스의 setLocale을 구현하면 된다.
+
+```java
+public interface LocaleResolver {
+
+    Locale resolveLocale(HttpServletRequest request);
+    void setLocale(HttpServletRequest request, @Nullable HttpServletResponse
+  response, @Nullable Locale locale);
+}
+```
+
